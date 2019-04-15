@@ -12,11 +12,5 @@ end
 
 def find_the_cheese(strings)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  index = 0
-  while index < cheese_types.count
-    if strings.include?(cheese_types[index])
-      return cheese_types[index]
-    end
-    index += 1
-  end
+  strings.find {|string| cheese_types.include?(string)}
 end
